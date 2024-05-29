@@ -1,50 +1,53 @@
-function openModal(src, captionText) {
+// Define la función setupModal()
+function setupModal() {
     var modal = document.getElementById("modal");
-    var modalImg = document.getElementById("modal-img");
-    var caption = document.getElementById("caption");
-    
-    modal.style.display = "flex";
-    modalImg.src = src;
-    caption.innerHTML = captionText;
+    var modalImage = document.getElementById("modal-image");
+    var modalContent = document.getElementById("modal-content");
+    var explanation = document.getElementById("explanation");
 
-    setTimeout(function() {
-        modal.classList.add("show");
-    }, 10); // Small delay to ensure transition
+    var gallery = document.getElementById("gallery");
+    var images = gallery.getElementsByTagName("img");
+
+    // Objeto con descripciones asociadas a nombres de archivo de imágenes
+    var imageDescriptions = {
+        "antigua.jpg": "Descripción de la imagen 1",
+        "imagen2.jpg": "Descripción de la imagen 2",
+        // Añade más descripciones según sea necesario
+    };
+
+    // Oculta el modal al principio
+    modal.style.display = "none";
+
+    // Agrega un evento de clic a cada imagen
+    Array.from(images).forEach(function(img) {
+        img.addEventListener("click", function() {
+            // Muestra el modal
+            modal.style.display = "block";
+
+            // Obtiene el nombre de archivo de la imagen
+            var imageName = this.src.split('/').pop();
+
+            // Cambia la imagen en el modal
+            modalImage.innerHTML = '<img src="' + this.src + '" style="width: 100%; height: 100%;">';
+
+            // Cambia la descripción en el modal si está disponible
+            if (imageDescriptions[imageName]) {
+                explanation.textContent = imageDescriptions[imageName];
+            } else {
+                explanation.textContent = "No hay descripción disponible para esta imagen.";
+            }
+        });
+    });
+
+    // Cierra el modal al hacer clic fuera de la imagen en el modal
+    modalContent.addEventListener("click", function(event) {
+        if (event.target === modalContent) {
+            modal.style.display = "none";
+        }
+    });
 }
 
-function closeModal() {
-    var modal = document.getElementById("modal");
-    modal.classList.remove("show");
-    setTimeout(function() {
-        modal.style.display = "none";
-    }, 1000); // Wait for transition to end
-}
-
-// Ejemplo de imágenes
-const images = [
-    { src: "imágenes/antigua.jpg", description: "Descripción de la foto 1" },
-    { src: "imágenes/antigua (2).jpg", description: "Descripción de la foto 2" },
-    { src: "imágenes/antigua (3).jpg", description: "Descripción de la foto 3" },
-    { src: "imágenes/antigua (4).jpg", description: "Descripción de la foto 4" },
-    { src: "imágenes/civil.jpg", description: "Descripción de la foto 5" },
-    { src: "imágenes/civil (2).jpg", description: "Descripción de la foto 6" },
-    { src: "imágenes/civil (3).jpg", description: "Descripción de la foto 7" },
-    { src: "imágenes/civil (4).jpg", description: "Descripción de la foto 8" },
-    { src: "imágenes/futura.jpg", description: "Descripción de la foto 9" },
-    { src: "imágenes/futura (2).jpg", description: "Descripción de la foto 10" },
-    { src: "imágenes/futura (3).jpg", description: "Descripción de la foto 11" },
-    { src: "imágenes/futura (4).jpg", description: "Descripción de la foto 12" }
-];
-
-// Cargar imágenes en la galería
-const gallery = document.getElementById("gallery");
-images.forEach(image => {
-    const div = document.createElement("div");
-    div.classList.add("photo");
-    const img = document.createElement("img");
-    img.src = image.src;
-    img.alt = image.description;
-    div.appendChild(img);
-    div.onclick = () => openModal(image.src, image.description);
-    gallery.appendChild(div);
+// Llama a la función setupModal() cuando el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function() {
+    setupModal(); // Llama a la función setupModal() aquí
 });

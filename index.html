@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,16 +9,171 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="gallery custom-grid" id="gallery">
-        <!-- Imágenes se generarán dinámicamente aquí -->
+    <div class="galeria">
+    <div class="grid-wrapper" id="gallery">
+        <!-- Aquí van las imágenes -->
+        <div class="tall">
+            <img src="imágenes/antigua.jpg">
+        </div>
+        <div class ="wide">
+            <img src="imágenes/antigua (2).jpg">
+        </div>
+        <div class="big">
+            <img src="imágenes/antigua.jpg">
+        </div>
+        <div>
+            <img src="imágenes/antigua (2).jpg">
+        </div>
+        <div class="tall">
+            <img src="imágenes/antigua (3).jpg">
+        </div>
+        <div>
+            <img src="imágenes/antigua (4).jpg">
+        </div>
+        <div class="tall">
+            <img src="imágenes/futura.jpg">
+        </div>
+        <div class="big">
+            <img src="imágenes/futura (2).jpg">
+        </div>
+        <div class ="wide">
+            <img src="imágenes/futura (3).jpg">
+        </div>
+        <div>
+            <img src="imágenes/futura (4).jpg">
+        </div>
+        <div>
+            <img src="imágenes/civil.jpg">
+        </div>
+        <div class="tall">
+            <img src="imágenes/civil (2).jpg">
+        </div>
+        <div>
+            <img src="imágenes/civil (3).jpg">
+        </div>
+        <div class="big">
+            <img src="imágenes/civil (4).jpg">
+        </div>
+        <div class="tall">
+            <img src="imágenes/antigua.jpg">
+        </div>
+        <div>
+            <img src="imágenes/antigua (2).jpg">
+        </div>
+        <div class="big">
+            <img src="imágenes/antigua (3).jpg">
+        </div>
+        <div>
+            <img src="imágenes/antigua (4).jpg">
+        </div>
+        <div class ="wide">
+            <img src="imágenes/futura.jpg">
+        </div>
+        <div class="tall">
+            <img src="imágenes/futura (2).jpg">
+        </div>
+        <div>
+            <img src="imágenes/futura (3).jpg">
+        </div>
+        <div>
+            <img src="imágenes/futura (4).jpg">
+        </div>
+        <div class ="wide">
+            <img src="imágenes/civil.jpg">
+        </div>
+        <div class="tall">
+            <img src="imágenes/civil (2).jpg">
+        </div>
+        <div class="big">
+            <img src="imágenes/civil (3).jpg">
+        </div>
+        <div class ="wide">
+            <img src="imágenes/civil (4).jpg">
+        </div>
+        <div>
+            <img src="imágenes/antigua.jpg">
+        </div>
+        <div class="tall">
+            <img src="imágenes/antigua (2).jpg">
+        </div>
+        <div>
+            <img src="imágenes/antigua (3).jpg">
+        </div>
+        <div>
+            <img src="imágenes/antigua (4).jpg">
+        </div>
+        <div class="big">
+            <img src="imágenes/futura.jpg">
+        </div>
+        <div class="tall">
+            <img src="imágenes/futura (2).jpg">
+        </div>
+        <div>
+            <img src="imágenes/futura (3).jpg">
+        </div>
+        <div>
+            <img src="imágenes/futura (4).jpg">
+        </div>
+        <div class="tall">
+            <img src="imágenes/civil.jpg">
+        </div>
+        <div>
+            <img src="imágenes/civil (2).jpg">
+        </div>
+        <div class="big">
+            <img src="imágenes/civil (3).jpg">
+        </div>
+        <div class ="wide">
+            <img src="imágenes/civil (4).jpg">
+        </div>
+        <div>
+            <img src="imágenes/antigua.jpg">
+        </div>
+        <div class="tall">
+            <img src="imágenes/antigua (2).jpg">
+        </div>
+        <div class="big">
+            <img src="imágenes/antigua (3).jpg">
+        </div>
+        <div>
+            <img src="imágenes/antigua (4).jpg">
+        </div>
+        <div class="tall">
+            <img src="imágenes/futura.jpg">
+        </div>
+        <div class="big">
+            <img src="imágenes/futura (2).jpg">
+        </div>
+        <div>
+            <img src="imágenes/futura (3).jpg">
+        </div>
+        <div>
+            <img src="imágenes/futura (4).jpg">
+        </div>
+        <div class="tall">
+            <img src="imágenes/civil.jpg">
+        </div>
+        <div>
+            <img src="imágenes/civil (2).jpg">
+        </div>
+        <div>
+            <img src="imágenes/civil (3).jpg">
+        </div>
+        <div class="tall">
+            <img src="imágenes/civil (4).jpg">
+        </div>
     </div>
 
+    <!-- Div para mostrar imagen completa y descripción -->
     <div id="modal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modal-img">
-        <div id="caption"></div>
+        <div id="modal-content" class="modal-content">
+            <span id="close" class="close">&times;</span>
+            <div id="modal-image" style=" height: 100%;"></div>
+            <div id="explanation"></div>
+        </div>
     </div>
-
+</div>
     <script src="script.js"></script>
 </body>
 </html>
+
