@@ -6,36 +6,118 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-auto-rows: 150px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+   
+    
     gap: 10px;
     padding: 10px;
+    grid-auto-rows: auto;
+    grid-auto-flow: dense; /* Añadido para que las imágenes encajen sin dejar espacios vacíos */
 }
 
 .photo {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     background-color: #ddd;
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Make sure the images take the full width and height of their container */
 .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+/* Masonry effect */
+
+
+/* For different heights */
+.photo.tall {
+    grid-row-end: span 2; /* Adjust span value as needed */
 }
 
 .photo.wide {
-    grid-column: span 2;
-}
-
-.photo.tall {
-    grid-row: span 2;
+    grid-column-end: span 2;
 }
 
 .photo.wide-tall {
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+}
+
+/* Custom grid placement */
+.custom-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+/* Custom grid item sizes */
+.custom-grid .photo:nth-child(1) {
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+.custom-grid .photo:nth-child(2) {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+}
+
+.custom-grid .photo:nth-child(3) {
+    grid-column-end: span 1;
+    grid-row-end: span 2;
+}
+
+.custom-grid .photo:nth-child(4) {
+    grid-column-end: span 2;
+    grid-row-end: span 1;
+}
+
+.custom-grid .photo:nth-child(5) {
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+.custom-grid .photo:nth-child(6) {
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+.custom-grid .photo:nth-child(7) {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+}
+
+.custom-grid .photo:nth-child(8) {
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+.custom-grid .photo:nth-child(9) {
+    grid-column-end: span 1;
+    grid-row-end: span 2;
+}
+
+.custom-grid .photo:nth-child(10) {
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+.custom-grid .photo:nth-child(11) {
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+.custom-grid .photo:nth-child(12) {
+    grid-column-end: span 2;
+    grid-row-end: span 1;
 }
 
 .modal {
@@ -44,8 +126,8 @@ body {
     z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
