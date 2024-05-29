@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <div class="photo wide" onclick="openModal('imágenes/antigua.jpg', 'Descripción de la foto 1')">
+            <img src="imágenes/antigua.jpg" alt="Foto 1">
+        </div>
+        <div class="photo tall" onclick="openModal('imágenes/antigua (2).jpg', 'Descripción de la foto 2')">
+            <img src="imágenes/antigua (2).jpg" alt="Foto 2">
+        </div>
+        <div class="photo wide-tall" onclick="openModal('imágenes/antigua (3).jpg', 'Descripción de la foto 3')">
+            <img src="imágenes/antigua (3).jpg" alt="Foto 3">
+        </div>
+        <div class="photo" onclick="openModal('imágenes/antigua (4).jpg', 'Descripción de la foto 4')">
+            <img src="imágenes/antigua (4).jpg" alt="Foto 4">
+        </div>
+        <div class="photo wide" onclick="openModal('imágenes/civil.jpg', 'Descripción de la foto 5')">
+            <img src="imágenes/civil.jpg" alt="Foto 5">
+        </div>
+        <div class="photo tall" onclick="openModal('imágenes/civil (2).jpg', 'Descripción de la foto 6')">
+            <img src="imágenes/civil (2).jpg" alt="Foto 6">
+        </div>
+        <div class="photo wide-tall" onclick="openModal('imágenes/civil (3).jpg', 'Descripción de la foto 7')">
+            <img src="imágenes/civil (3).jpg" alt="Foto 7">
+        </div>
+        <div class="photo" onclick="openModal('imágenes/civil (4).jpg', 'Descripción de la foto 8')">
+            <img src="imágenes/civil (4).jpg" alt="Foto 8">
+        </div>
+        <div class="photo wide" onclick="openModal('imágenes/futura.jpg', 'Descripción de la foto 9')">
+            <img src="imágenes/futura.jpg" alt="Foto 9">
+        </div>
+        <div class="photo tall" onclick="openModal('imágenes/futura (2).jpg', 'Descripción de la foto 10')">
+            <img src="imágenes/futura (2).jpg" alt="Foto 10">
+        </div>
+        <div class="photo wide-tall" onclick="openModal('imágenes/futura (3).jpg', 'Descripción de la foto 11')">
+            <img src="imágenes/futura (3).jpg" alt="Foto 11">
+        </div>
+        <div class="photo" onclick="openModal('imágenes/futura (4).jpg', 'Descripción de la foto 12')">
+            <img src="imágenes/futura (4).jpg" alt="Foto 12">
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
