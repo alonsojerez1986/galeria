@@ -117,19 +117,7 @@ img:hover {
    
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
 #explanation{
     background: white;
     border-radius: 15px;
@@ -155,13 +143,24 @@ img:hover {
 }
 
 /* Media query for smaller screens (e.g., mobile) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .grid-wrapper {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
     .modal-content {
-        max-width: 90%;
-        max-height: 90%;
+        width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+        height: auto; /* Permite que el contenido determine la altura */
+        display: flex;
+        flex-direction: column; /* Asegura que el contenido se ajuste correctamente en vertical */
+        justify-content: center;
+        align-items: center; /* Centrar horizontalmente */
+    }
+
+    .modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Centrar verticalmente */
     }
 }

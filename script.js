@@ -39,12 +39,14 @@ function setupModal() {
         });
     });
 
-    // Cierra el modal al hacer clic fuera de la imagen en el modal
-    modalContent.addEventListener("click", function(event) {
-        if (event.target === modalContent) {
-            modal.style.display = "none";
-        }
+    // Cierra el modal al hacer clic en cualquier parte del modal
+    modal.addEventListener("click", function() {
+        modal.style.display = "none";
     });
+
+
+
+   
 }
 
 // Llama a la función setupModal() cuando el DOM esté completamente cargado
