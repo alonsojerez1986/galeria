@@ -21,3 +21,14 @@ Easy Integration: This module is designed to be easily integrated into any websi
 Minimalist Design: The gallery's design is minimalist and focused on showcasing the images. The interface remains distraction-free, allowing users to focus on the visual content.
 
 This interactive and responsive gallery module is an ideal tool for any website looking to offer an impressive and immersive visual experience. Its easy integration and adaptable design ensure it can be used in a variety of contexts, from personal portfolios to commercial websites.
+
+---------
+Sources:
+
+User:Coding Master
+Responsive Image Gallery Using Only CSS Grid  
+https://youtu.be/xYjCIe3grGM?si=3KKFlR8XS2kFAwKG
+
+User:midudev
+Animaciones CSS a través del Scroll sin necesidad de JavaScript. 100% nativo
+https://youtu.be/AbCYziNyjvk?si=PYSGvqIztpkPtPxA
